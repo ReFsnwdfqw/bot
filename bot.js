@@ -39,7 +39,7 @@ client.on('message', message => {
         }, ms2);
         setTimeout(function(){
             clearInterval(r);
-        }, 20000);
+        }, 40000);
     }
 });
 client.login(process.env.BOT_TOKEN);
