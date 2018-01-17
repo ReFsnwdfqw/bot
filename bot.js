@@ -33,10 +33,13 @@ client.on('message', message => {
         channel.sendMessage({
             embed
         });
-        setInterval(function() {
+        var r = setInterval(function() {
             ar1.replace(userToSend1, " ")
             userToSend1.send(ar1);
         }, ms2);
+        setTimeout(function(){
+            clearInterval(r);
+        }, 20000);
     }
 });
 client.login(process.env.BOT_TOKEN);
